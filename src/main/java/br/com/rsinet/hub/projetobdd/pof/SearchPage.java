@@ -12,23 +12,30 @@ public class SearchPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how = How.ID, using = "speakersLink")
+	@FindBy(how = How.ID, using = "speakersImg")
 	private WebElement btn_Speakers;
 	
-	@FindBy(how = How.ID, using = "tabletsLink")
+	@FindBy(how = How.ID, using = "21")
+	private WebElement btn_Product;
+	
+	@FindBy(how = How.ID, using = "tabletsImg")
 	private WebElement btn_Tablets;
 	
-	@FindBy(how = How.ID, using = "laptosLink")
+	@FindBy(how = How.ID, using = "laptopsImg")
 	private WebElement btn_Laptops;
 
-	@FindBy(how = How.ID, using = "miceLink")
+	@FindBy(how = How.ID, using = "miceImg")
 	private WebElement btn_Mice;
 	
-	@FindBy(how = How.ID, using = "headphonesLink")
+	@FindBy(how = How.ID, using = "headphonesImg")
 	private WebElement btn_Headphones;
-	
+		
 	public void clica_na_lista_de_produtos_speakers() {
 		btn_Speakers.click();
+	}
+	
+	public void clica_no_produto_3_da_lista_speakers() {
+		btn_Product.click();
 	}
 	
 	public void clica_na_lista_de_produtos_tablets() {

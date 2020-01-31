@@ -32,6 +32,7 @@ public class SearchPageSteps {
 	@Quando("^clicar em um produto do fornecedor X$")
 	public void clicar_em_produto_x() {
 		SP.clica_na_lista_de_produtos_speakers();
+		SP.clica_no_produto_3_da_lista_speakers();
 	}
-	
+
 }

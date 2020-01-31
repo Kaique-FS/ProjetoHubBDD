@@ -1,6 +1,7 @@
 package br.com.rsinet.hub.projetobdd.stepsdefinitions;
 
 import org.openqa.selenium.WebDriver;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 import br.com.rsinet.hub.projetobdd.cucumber.TestContext;
@@ -41,6 +42,7 @@ public class RegisterSteps {
 
 	@Entao("^entrar na conta cadastrada$")
 	public void entrar_na_conta_cadastrada() {
+		assertEquals(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(), TC.getWebDriverManager().getDriver().getCurrentUrl());
 		TC.getWebDriverManager().closeDriver();
 	}
 	

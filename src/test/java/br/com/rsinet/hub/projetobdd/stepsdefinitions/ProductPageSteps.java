@@ -1,5 +1,6 @@
 package br.com.rsinet.hub.projetobdd.stepsdefinitions;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 import org.openqa.selenium.WebDriver;
@@ -37,7 +38,7 @@ public class ProductPageSteps {
 	 @Entao("^validar se o produto X é igual ao selecionado$")
 	 public void validar_se_o_produto_X_é_igual_ao_selecionado() {
 		String NomeProduto = (String) TC.SC.getContext(Context.PRODUCT_NAME);
-		assertNotEquals(NomeProduto, PP.getNomeProduto());
+		assertEquals(NomeProduto, PP.getNomeProduto());
 	 }
 	 
 	 @Entao("^validar se o produto Y é igual ao selecionado$")
