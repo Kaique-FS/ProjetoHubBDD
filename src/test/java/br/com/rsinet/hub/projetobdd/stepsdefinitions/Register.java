@@ -1,13 +1,10 @@
 package br.com.rsinet.hub.projetobdd.stepsdefinitions;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.com.rsinet.hub.projetobdd.dataProvider.ConfigFileReader;
-import br.com.rsinet.hub.projetobdd.managers.FileReaderManager;
 import br.com.rsinet.hub.projetobdd.managers.PageObjectManager;
+import br.com.rsinet.hub.projetobdd.managers.WebDriverManager;
 import br.com.rsinet.hub.projetobdd.pof.HomePage;
 import br.com.rsinet.hub.projetobdd.pof.RegisterPage;
 import cucumber.api.java.pt.Dado;
@@ -21,13 +18,12 @@ public class Register {
 	RegisterPage RP;
 	PageObjectManager POM;
 	ConfigFileReader CFR;
+	WebDriverManager WDM;
 
 	@Dado("^usuário em questão está Pagina inicial$")
 	public void usuário_em_questão_está_Pagina_inicial() {
-		System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
+		WDM = new WebDriverManager();
+		driver = WDM.getDriver();
 		POM = new PageObjectManager(driver);
 		HP = POM.getHomePage();
 		HP.navegar_para_pagina_principal();
