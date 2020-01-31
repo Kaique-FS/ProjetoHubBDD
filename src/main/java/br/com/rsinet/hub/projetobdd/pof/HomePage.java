@@ -1,10 +1,13 @@
 package br.com.rsinet.hub.projetobdd.pof;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+
+import br.com.rsinet.hub.projetobdd.managers.FileReaderManager;
 
 public class HomePage {
 	WebDriver driver;
@@ -61,13 +64,72 @@ public class HomePage {
 	
 	@FindBy(how = How.ID, using = "details_21")
 	private WebElement btn_Product3;
-	
-	public void perform_Search(String search) {
-		driver.navigate().to("http://www.advantageonlineshopping.com/#/register");
-	}
 
 	public void navegar_para_pagina_principal() {
-		driver.get("http://www.advantageonlineshopping.com/#/");
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
+	public void clica_em_produtos() {
+		btn_OurProducts.click();
+	}
+	
+	public void clica_em_ofertas_especiais() {
+		btn_SpecialOffer.click();
+	}
+	
+	public void clica_em_items_populares() {
+		btn_PopularItems.click();
+	}
+	
+	public void clica_em_nos_contate() {
+		btn_ContactUs.click();
+	}
+	
+	public void clica_em_pesquisar() {
+		btn_Pesquisa.click();
+	}
+	
+	public void digita_o_texto_de_pesquisa() {
+		txtbx_CampoDePesquisa.sendKeys("Carregador" + Keys.ENTER);
+	}
+	
+	public void clica_em_logIn() {
+		btn_Login.click();
+	}
+	
+	public void clica_em_novo_usuario() {
+		btn_NovoUsuario.sendKeys(Keys.ENTER);
+	}
+	
+	public void clica_na_lista_de_produtos_speakers() {
+		btn_Speakers.click();
+	}
+	
+	public void clica_na_lista_de_produtos_tablets() {
+		btn_Tablets.click();
+	}
+	
+	public void clica_na_lista_de_produtos_laptops() {
+		btn_Laptops.click();
+	}
+	
+	public void clica_na_lista_de_produtos_mices() {
+		btn_Mice.click();
+	}
+	
+	public void clica_na_lista_de_produtos_headphones() {
+		btn_Headphones.click();
+	}
+	
+	public void clica_no_produto_popular_1() {
+		btn_Product1.click();
+	}
+	
+	public void clica_no_produto_popular_2() {
+		btn_Product2.click();
+	}
+	
+	public void clica_no_produto_popular_3() {
+		btn_Product3.click();
+	}
 }

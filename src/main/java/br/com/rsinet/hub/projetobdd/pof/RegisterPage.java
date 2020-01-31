@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage {
 
@@ -63,15 +64,15 @@ public class RegisterPage {
 	}
 	
 	public void insere_email(String email) {
-		txtbx_ConfirmaSenha.sendKeys(email);
+		txtbx_Email.sendKeys(email);
 	}
 	
 	public void insere_senha(String senha) {
-		txtbx_Email.sendKeys(senha);
+		txtbx_Senha.sendKeys(senha);
 	}
 	
 	public void insere_confirmacao_senha(String confirmacaoSenha) {
-		txtbx_Senha.sendKeys(confirmacaoSenha);
+		txtbx_ConfirmaSenha.sendKeys(confirmacaoSenha);
 	}
 	
 	public void insere_primeiro_nome(String firstName) {
@@ -87,7 +88,8 @@ public class RegisterPage {
 	}
 	
 	public void insere_pais(String país) {
-		drpdwn_Pais.sendKeys(país);
+		Select select = new Select(drpdwn_Pais);
+		select.selectByVisibleText(país);
 	}
 	
 	public void insere_cidade(String cidade) {
