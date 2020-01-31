@@ -41,21 +41,6 @@ public class HomePage {
 	@FindBy(how = How.XPATH, using = "/html/body/login-modal/div/div/div[3]/a[2]")
 	private WebElement btn_NovoUsuario;
 	
-	@FindBy(how = How.ID, using = "speakersLink")
-	private WebElement btn_Speakers;
-	
-	@FindBy(how = How.ID, using = "tabletsLink")
-	private WebElement btn_Tablets;
-	
-	@FindBy(how = How.ID, using = "laptosLink")
-	private WebElement btn_Laptops;
-
-	@FindBy(how = How.ID, using = "miceLink")
-	private WebElement btn_Mice;
-	
-	@FindBy(how = How.ID, using = "headphonesLink")
-	private WebElement btn_Headphones;
-	
 	@FindBy(how = How.ID, using = "details_16")
 	private WebElement btn_Product1;
 	
@@ -99,26 +84,6 @@ public class HomePage {
 	
 	public void clica_em_novo_usuario() {
 		btn_NovoUsuario.sendKeys(Keys.ENTER);
-	}
-	
-	public void clica_na_lista_de_produtos_speakers() {
-		btn_Speakers.click();
-	}
-	
-	public void clica_na_lista_de_produtos_tablets() {
-		btn_Tablets.click();
-	}
-	
-	public void clica_na_lista_de_produtos_laptops() {
-		btn_Laptops.click();
-	}
-	
-	public void clica_na_lista_de_produtos_mices() {
-		btn_Mice.click();
-	}
-	
-	public void clica_na_lista_de_produtos_headphones() {
-		btn_Headphones.click();
 	}
 	
 	public void clica_no_produto_popular_1() {

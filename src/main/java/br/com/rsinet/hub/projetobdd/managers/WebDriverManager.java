@@ -28,7 +28,7 @@ public class WebDriverManager {
 		return driver;
 	}
 
-	private WebDriver createDriver() {
+	public WebDriver createDriver() {
 		switch (environmentType) {
 		case LOCAL:
 			driver = createLocalDriver();

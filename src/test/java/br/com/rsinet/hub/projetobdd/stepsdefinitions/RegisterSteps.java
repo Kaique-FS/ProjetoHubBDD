@@ -1,9 +1,11 @@
 package br.com.rsinet.hub.projetobdd.stepsdefinitions;
 
 import org.openqa.selenium.WebDriver;
+import static org.junit.Assert.assertNotEquals;
 
 import br.com.rsinet.hub.projetobdd.cucumber.TestContext;
 import br.com.rsinet.hub.projetobdd.dataProvider.ConfigFileReader;
+import br.com.rsinet.hub.projetobdd.managers.FileReaderManager;
 import br.com.rsinet.hub.projetobdd.managers.PageObjectManager;
 import br.com.rsinet.hub.projetobdd.managers.WebDriverManager;
 import br.com.rsinet.hub.projetobdd.pof.HomePage;
@@ -19,12 +21,13 @@ public class RegisterSteps {
 	PageObjectManager POM;
 	ConfigFileReader CFR;
 	WebDriverManager WDM;
-	TestContext testContext;
+	TestContext TC;
+	FileReaderManager FRM;
 
 	 public RegisterSteps(TestContext context) {
-		 testContext = context;
-		 RP = testContext.getPageObjectManager().getRegisterPage();
-		 }
+		 TC = context;
+		 RP = TC.getPageObjectManager().getRegisterPage();
+	 }
 
 	@Quando("^inserir detalhes da conta$")
 	public void inserir_detalhes_da_conta() {
@@ -38,12 +41,13 @@ public class RegisterSteps {
 
 	@Entao("^entrar na conta cadastrada$")
 	public void entrar_na_conta_cadastrada() {
-		testContext.getWebDriverManager().closeDriver();
+		TC.getWebDriverManager().closeDriver();
 	}
 	
 	@Entao("^aparece mensagem de usuario ja cadastrado$")
 	public void conferir_cadastro() {
-		testContext.getWebDriverManager().closeDriver();
+		assertNotEquals(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(), TC.getWebDriverManager().getDriver().getCurrentUrl());
+		TC.getWebDriverManager().closeDriver();
 	}
 	
 }

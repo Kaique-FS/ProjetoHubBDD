@@ -44,4 +44,10 @@ public class HomePageSteps {
 	public void clicar_em_novo_usuario() {
 		HP.clica_em_novo_usuario();
 	}
+	
+	@Quando("^clicar em um produto do fornecedor Y$")
+	public void clicar_em_produto_y() {
+		HP.clica_em_items_populares();
+		HP.clica_no_produto_popular_2();
+	}
 }

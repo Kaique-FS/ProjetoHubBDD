@@ -6,6 +6,7 @@ import br.com.rsinet.hub.projetobdd.pof.CartPage;
 import br.com.rsinet.hub.projetobdd.pof.HomePage;
 import br.com.rsinet.hub.projetobdd.pof.ProductPage;
 import br.com.rsinet.hub.projetobdd.pof.RegisterPage;
+import br.com.rsinet.hub.projetobdd.pof.SearchPage;
 
 public class PageObjectManager {
 
@@ -15,6 +16,7 @@ public class PageObjectManager {
 	private CartPage CP;
 	private HomePage HP;
 	private RegisterPage RP;
+	private SearchPage SP;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -34,6 +36,10 @@ public class PageObjectManager {
 
 	public CartPage getCartPage() {
 		return (CP == null) ? CP = new CartPage(driver) : CP;
+	}
+
+	public SearchPage getSearchPage() {
+		return (SP == null) ? SP = new SearchPage(driver) : SP;
 	}
 
 }
