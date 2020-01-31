@@ -1,0 +1,38 @@
+[ 
+ {
+ "userName": "kaiquefs",
+ "email": "kaique.pok@gmail.com",
+ "senha": "Kaique1",
+ "confirmarSenha": "Kaique1",
+ "detalhesPessoais": {
+ "primeiroNome": "Kaique",
+ "ultimoNome": "Silva",
+ "numeroTelefone": "+55 11 98756-5463",
+ },
+ "endereco": {
+ "pais": "Brazil",
+ "cidade": "Osasco",
+ "endereco": "Osasco",
+ "estado": "São Paulo",
+ "codigoPostal": "76857 765"
+ }
+ },
+{
+ "userName": "teste",
+ "email": "teste@gmail.com",
+ "senha": "Teste1",
+ "confirmarSenha": "Teste1",
+ "detalhesPessoais": {
+ "primeiroNome": "Teste",
+ "ultimoNome": "Testao",
+ "numeroTelefone": "+55 99 99999-9999",,
+ },
+ "endereco": {
+ "pais": "Brazil",
+ "cidade": "Testelandia",
+ "endereco": "testedoteste",
+ "estado": "São Paulo",
+ "codigoPostal": "99999 999"
+ }
+ }
+]

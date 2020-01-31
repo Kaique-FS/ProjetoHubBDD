@@ -4,6 +4,8 @@
 Funcionalidade: Automatização de Pagina de Cadastro
 Descrição: Realização de um cadastro
 
+Contexto?
+
 Cenario: Cliente realiza um cadastro no site
 	Dado usuário em questão está Pagina inicial
 	Quando clicar em login
