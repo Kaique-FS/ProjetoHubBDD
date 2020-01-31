@@ -29,9 +29,9 @@ public class RegisterSteps {
 		 }
 
 	@Quando("^inserir detalhes da conta$")
-	public void inserir_detalhes_da_conta(String customerName) {
-		Customer customer = FileReaderManager.getInstance().getJsonReader().getCustomerByName(customerName);
-		RP.fill_PersonalDetails(customer);	
+	public void inserir_detalhes_da_conta() {
+		//Customer customer = FileReaderManager.getInstance().getJsonReader().getCustomerByName(customerName);
+		RP.fill_PersonalDetails();	
 
 		RP.clica_checkbox_1();
 		RP.clica_checkbox_2();

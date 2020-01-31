@@ -122,18 +122,18 @@ public class RegisterPage {
 		btn_Registrar.sendKeys(Keys.ENTER);
 	}
 	
-	public void fill_PersonalDetails(Customer customer) {
-		insere_nome_usuario("customer.userName");
-		insere_email("customer.email");
-		insere_senha("customer.senha");
-		insere_confirmacao_senha("customer.confirmarSenha");
-		insere_primeiro_nome("customer.detalhesPessoais.primeiroNome");
-		insere_ultimo_nome("customer.detalhesPessoais.ultimoNome");
-		insere_numero_telefone("customer.detalhesPessoais.numeroTelefone");
-		insere_pais("customer.endereco.pais");
-		insere_cidade("customer.endereco.cidade");
-		insere_endereco("customer.endereco.endereco");
-		insere_codigopostal("customer.endereco.estado");
-		insere_estado("customer.endereco.codigoPostal");
+	public void fill_PersonalDetails() {
+		insere_nome_usuario("kaiquefs");
+		insere_email("kaique.pok@gmail.com");
+		insere_senha("Kaique1");
+		insere_confirmacao_senha("Kaique1");
+		insere_primeiro_nome("Kaique");
+		insere_ultimo_nome("Silva");
+		insere_numero_telefone("+55 11 99353-6566");
+		insere_pais("Brazil");
+		insere_cidade("Osasco");
+		insere_endereco("Osasco");
+		insere_codigopostal("07564 345");
+		insere_estado("São Paulo");
 	}
 }
