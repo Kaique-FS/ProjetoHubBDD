@@ -7,10 +7,13 @@ public class TestContext {
 
 	private WebDriverManager WDM;
 	private PageObjectManager POM;
+	public ScenarioContext SC;
 
 	public TestContext() {
 		WDM = new WebDriverManager();
 		POM = new PageObjectManager(WDM.getDriver());
+		SC = new ScenarioContext();
+
 	}
 
 	public WebDriverManager getWebDriverManager() {
@@ -19,5 +22,9 @@ public class TestContext {
 
 	public PageObjectManager getPageObjectManager() {
 		return POM;
+	}
+
+	public ScenarioContext getScenarioContext() {
+		return SC;
 	}
 }

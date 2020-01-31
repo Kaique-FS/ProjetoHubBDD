@@ -4,11 +4,16 @@
 Funcionalidade: Automatização de Pagina de Cadastro
 Descrição: Realização de um cadastro
 
-Contexto?
-
-Cenario: Cliente realiza um cadastro no site
+Contexto:
 	Dado usuário em questão está Pagina inicial
 	Quando clicar em login
 	E clicar em novo usuario
 	E inserir detalhes da conta
+
+@CenarioCadastroConcluido
+Cenario: Cliente realiza um cadastro no site
 	Entao entrar na conta cadastrada
+
+@CenarioCadastroJaExistentConcluido
+Cenario: Cliente realiza um cadastro ja existente
+	Entao aparece mensagem de usuario ja cadastrado
