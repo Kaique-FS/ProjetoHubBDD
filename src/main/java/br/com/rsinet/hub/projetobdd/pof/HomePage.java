@@ -74,7 +74,11 @@ public class HomePage {
 		btn_Pesquisa.click();
 	}
 	
-	public void digita_o_texto_de_pesquisa() {
+	public void digita_o_texto_de_pesquisa_valido() {
+		txtbx_CampoDePesquisa.sendKeys("mice" + Keys.ENTER);
+	}
+	
+	public void digita_o_texto_de_pesquisa_invalido() {
 		txtbx_CampoDePesquisa.sendKeys("Carregador" + Keys.ENTER);
 	}
 	
@@ -97,4 +101,5 @@ public class HomePage {
 	public void clica_no_produto_popular_3() {
 		btn_Product3.click();
 	}
+
 }

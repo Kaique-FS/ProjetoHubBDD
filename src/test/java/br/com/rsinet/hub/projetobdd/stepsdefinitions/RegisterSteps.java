@@ -42,7 +42,7 @@ public class RegisterSteps {
 
 	@Entao("^entrar na conta cadastrada$")
 	public void entrar_na_conta_cadastrada() {
-		assertEquals(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(), TC.getWebDriverManager().getDriver().getCurrentUrl());
+		assertEquals(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(), "http://www.advantageonlineshopping.com/#/");
 		TC.getWebDriverManager().closeDriver();
 	}
 	

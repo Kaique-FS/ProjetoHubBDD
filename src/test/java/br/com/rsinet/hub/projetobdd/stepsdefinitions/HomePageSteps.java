@@ -50,4 +50,16 @@ public class HomePageSteps {
 		HP.clica_em_items_populares();
 		HP.clica_no_produto_popular_2();
 	}
+	
+	@Quando("^realizar a pesquisa do produto existente$")
+	public void pesquisa_produto_existente() {
+		HP.clica_em_pesquisar();
+		HP.digita_o_texto_de_pesquisa_valido();
+	}
+	
+	@Quando("^realizar a pesquisa do produto nao existente$")
+	public void pesquisa_produto_inexistente() {
+		HP.clica_em_pesquisar();
+		HP.digita_o_texto_de_pesquisa_invalido();
+	}
 }

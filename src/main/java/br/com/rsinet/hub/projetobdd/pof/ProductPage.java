@@ -25,5 +25,4 @@ public class ProductPage {
 	public void clickOn_AddToCart() {
 		btn_AddToCart.click();
 	}
-
 }

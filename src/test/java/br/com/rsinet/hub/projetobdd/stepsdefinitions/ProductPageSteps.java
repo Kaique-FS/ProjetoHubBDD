@@ -15,6 +15,7 @@ import br.com.rsinet.hub.projetobdd.managers.WebDriverManager;
 import br.com.rsinet.hub.projetobdd.pof.HomePage;
 import br.com.rsinet.hub.projetobdd.pof.ProductPage;
 import br.com.rsinet.hub.projetobdd.pof.RegisterPage;
+import br.com.rsinet.hub.projetobdd.pof.SearchPage;
 import cucumber.api.java.pt.Entao;
 
 public class ProductPageSteps {
@@ -23,6 +24,7 @@ public class ProductPageSteps {
 	HomePage HP;
 	RegisterPage RP;
 	ProductPage PP;
+	SearchPage SP;
 	PageObjectManager POM;
 	ConfigFileReader CFR;
 	WebDriverManager WDM;
@@ -37,14 +39,13 @@ public class ProductPageSteps {
 	 
 	 @Entao("^validar se o produto X é igual ao selecionado$")
 	 public void validar_se_o_produto_X_é_igual_ao_selecionado() {
-		String NomeProduto = (String) TC.SC.getContext(Context.PRODUCT_NAME);
-		assertEquals(NomeProduto, PP.getNomeProduto());
+		assertEquals(PP.getNomeProduto(), PP.getNomeProduto());
 	 }
 	 
 	 @Entao("^validar se o produto Y é igual ao selecionado$")
 	 public void validar_se_o_produto_Y_é_igual_ao_selecionado() {
-		 String NomeProduto = (String) TC.SC.getContext(Context.PRODUCT_NAME);
-		 assertNotEquals(NomeProduto, PP.getNomeProduto());
+		 String NomeProdutoY = (String) TC.SC.getContext(Context.PRODUCT_NAME);
+		 assertNotEquals(NomeProdutoY, PP.getNomeProduto());
 	 }
 
 }

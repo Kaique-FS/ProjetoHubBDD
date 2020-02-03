@@ -14,7 +14,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/functionalTests", glue = {
 		"br.com.rsinet.hub.projetobdd.stepsdefinitions" }, plugin = {
-				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
+				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, 
+				monochrome = true, 
+				tags= {"@CenarioProdutoNaoCorrespondente"})
 
 public class TestRunner {
 	@AfterClass
@@ -28,3 +30,5 @@ public class TestRunner {
 	    Reporter.setSystemInfo("Java Version", "1.8.0_231");
 	}
 }
+
+//, tags= {"@CenarioProdutoNaoCorrespondente"}
