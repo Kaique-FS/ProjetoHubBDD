@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 		"br.com.rsinet.hub.projetobdd.stepsdefinitions" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, 
 				monochrome = true, 
-				tags= {"@CenarioSucesso, @CenarioFalha"})
+				tags= {"@Automatizacao"})
 
 public class TestRunner {
 	@AfterClass
@@ -32,3 +32,4 @@ public class TestRunner {
 	}
 }
 
+//@CenarioSucesso, @CenarioFalha

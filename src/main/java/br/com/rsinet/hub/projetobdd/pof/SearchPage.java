@@ -7,6 +7,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchPage {
+	
+	WebDriver driver;
 
 	public SearchPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -27,8 +29,17 @@ public class SearchPage {
 	@FindBy(how = How.ID, using = "miceImg")
 	private WebElement btn_Mice;
 	
+	@FindBy(how = How.ID, using = "30")
+	private WebElement btn_Mice4;
+	
 	@FindBy(how = How.ID, using = "headphonesImg")
 	private WebElement btn_Headphones;
+	
+	@FindBy(how = How.ID, using = "searchResultLabel")
+	private WebElement txt_ResultadoPesquisa;
+	
+	@FindBy(how = How.CLASS_NAME, using = "noProducts roboto-bold ")
+	private WebElement txt_SemResultadoDePesquisa;
 		
 	public void clica_na_lista_de_produtos_speakers() {
 		btn_Speakers.click();
@@ -50,7 +61,19 @@ public class SearchPage {
 		btn_Mice.click();
 	}
 	
+	public void clica_no_produto_4_da_lista_mices() {
+		btn_Mice4.click();
+	}
+	
 	public void clica_na_lista_de_produtos_headphones() {
 		btn_Headphones.click();
+	}
+	
+	public boolean Produto_Existente_Aparece() {
+		return txt_ResultadoPesquisa.isDisplayed();
+	}
+	
+	public String Produto_Inexistente_Nao_Aparece() throws Exception {
+		return txt_SemResultadoDePesquisa.getText();
 	}
 }

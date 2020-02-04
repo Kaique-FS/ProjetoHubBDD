@@ -3,26 +3,24 @@ package br.com.rsinet.hub.projetobdd.stepsdefinitions;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub.projetobdd.cucumber.TestContext;
-import br.com.rsinet.hub.projetobdd.dataProvider.ConfigFileReader;
-import br.com.rsinet.hub.projetobdd.managers.PageObjectManager;
-import br.com.rsinet.hub.projetobdd.managers.WebDriverManager;
 import br.com.rsinet.hub.projetobdd.pof.CartPage;
 import br.com.rsinet.hub.projetobdd.pof.HomePage;
-import br.com.rsinet.hub.projetobdd.pof.RegisterPage;
+import cucumber.api.java.pt.Entao;
 
 public class CartPageSteps {
 
 	WebDriver driver;
 	HomePage HP;
-	RegisterPage RP;
 	CartPage CP;
-	PageObjectManager POM;
-	ConfigFileReader CFR;
-	WebDriverManager WDM;
 	TestContext TC;
 	
 	public CartPageSteps(TestContext context) {
 		TC = context;
 		CP = TC.getPageObjectManager().getCartPage();
+	}
+	
+	@Entao("^clica no carrinho$")
+	public void validar_se_o_produto_X_é_igual_ao_selecionado() {
+		CP.clickOn_Cart();
 	}
 }

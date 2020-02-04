@@ -121,7 +121,7 @@ public class RegisterPage {
 	}
 	
 	public void fill_PersonalDetails() {
-		insere_nome_usuario("kaiquefs");
+		insere_nome_usuario("kaiquefss");
 		insere_email("kaique.pok@gmail.com");
 		insere_senha("Kaique1");
 		insere_confirmacao_senha("Kaique1");

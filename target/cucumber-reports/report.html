@@ -39,6 +39,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -52,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 4, 2020 12:22:59 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 4, 2020 02:44:59 PM</span>
 				</a>
 			</li>
 			<li>
@@ -78,6 +79,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -90,8 +93,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@CenarioSucesso</a></li>
-					<li><a href='#'>@CenarioFalha</a></li>
+					<li><a href='#'>@Automatizacao</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -139,10 +141,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>22</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='72.727%'><span class='strong'>8</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='9.091%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='18.182%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -154,10 +156,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>22</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='72.727%'><span class='strong'>8</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='9.091%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='18.182%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -172,34 +174,34 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Automatização de Pagina de Cadastro</span>
-						<span class='test-time'>Feb 4, 2020 12:22:59 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Automatização Site AdvantageOnlineShopping</span>
+						<span class='test-time'>Feb 4, 2020 02:45:00 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 4, 2020 12:22:59 PM</span>
-	<span class='label end-time'>Feb 4, 2020 12:23:54 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 55s+231ms</span>
+	<span class='label start-time'>Feb 4, 2020 02:45:00 PM</span>
+	<span class='label end-time'>Feb 4, 2020 02:45:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+876ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
-				<li class='node level-1  pass' status='pass' test-id='2'>
+				<li class='node level-1  fail' status='fail' test-id='2'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cliente realiza um cadastro no site</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:23 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 23s+876ms</span>
-						<span class='test-status right pass'>pass</span>
-								<span class='category label white-text'>@CenarioSucesso</span>
+						<h5 class='node-name'>Scenario: Cliente entra no site, realiza cadastro e compra dois produtos</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:40 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 40s+790ms</span>
+						<span class='test-status right fail'>fail</span>
+								<span class='category label white-text'>@Automatizacao</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Dado usuário em questão está Pagina inicial</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:12 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+749ms</span>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+113ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -215,7 +217,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:12 PM</td>
+													<td class='timestamp'>2:45:12 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -226,8 +228,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='4'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Quando clicar em login</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:15 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+600ms</span>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+724ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -243,7 +245,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:15 PM</td>
+													<td class='timestamp'>2:45:14 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -254,8 +256,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='5'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>E clicar em novo usuario</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:15 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+508ms</span>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:15 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+659ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -271,7 +273,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:15 PM</td>
+													<td class='timestamp'>2:45:15 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -282,8 +284,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='6'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>E inserir detalhes da conta</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:23 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 7s+365ms</span>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:22 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 7s+696ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -299,7 +301,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:23 PM</td>
+													<td class='timestamp'>2:45:22 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -309,9 +311,9 @@
 				</li>
 				<li class='node level-2 leaf pass' status='pass' test-id='7'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao entrar na conta cadastrada</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:23 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+184ms</span>
+						<h5 class='node-name'>Quando clicar em um produto do fornecedor X</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:24 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+700ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -327,33 +329,19 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:23 PM</td>
+													<td class='timestamp'>2:45:24 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
-										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_realiza_um_cadastro_no_site.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_realiza_um_cadastro_no_site.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_realiza_um_cadastro_no_site.png'></li>
-										</ul>
 								</div>
 						</div>
 				</li>
-						</ul>
-				</li>
-				<li class='node level-1  pass' status='pass' test-id='8'>
+				<li class='node level-2 leaf pass' status='pass' test-id='8'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cliente realiza um cadastro ja existente</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:54 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 21s+33ms</span>
-						<span class='test-status right pass'>pass</span>
-								<span class='category label white-text'>@CenarioFalha</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='9'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Dado usuário em questão está Pagina inicial</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:44 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+827ms</span>
+						<h5 class='node-name'>E adicionar ao carrinho</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:25 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+596ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -369,7 +357,35 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:44 PM</td>
+													<td class='timestamp'>2:45:25 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>E voltar a pagina inicial</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:25 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+277ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:25 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -379,9 +395,9 @@
 				</li>
 				<li class='node level-2 leaf pass' status='pass' test-id='10'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Quando clicar em login</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:46 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+696ms</span>
+						<h5 class='node-name'>Quando buscar um produto</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:30 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 5s+432ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -397,7 +413,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:46 PM</td>
+													<td class='timestamp'>2:45:30 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -405,12 +421,12 @@
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='11'>
+				<li class='node level-2 leaf fail' status='fail' test-id='11'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>E clicar em novo usuario</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:47 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+536ms</span>
-						<span class='test-status right pass'>pass</span>
+						<h5 class='node-name'>E clicar no produto</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:40 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 10s+103ms</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -423,22 +439,51 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:47 PM</td>
-													<td class='step-details'>passed</td>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:45:40 PM</td>
+													<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#\33 0"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'RSI1525', ip: '10.1.11.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\KAIQUE~1.SIL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64099}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0cabd05cc4e588aa1dcb247c7b62bf63
+*** Element info: {Using=id, value=30}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at br.com.rsinet.hub.projetobdd.pof.SearchPage.clica_no_produto_4_da_lista_mices(SearchPage.java:65)
+	at br.com.rsinet.hub.projetobdd.stepsdefinitions.SearchPageSteps.clicar_em_produto_y(SearchPageSteps.java:34)
+	at ✽.E clicar no produto(Automatizacao.feature:19)
+</pre></td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='12'>
+				<li class='node level-2 leaf skip' status='skip' test-id='12'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>E inserir detalhes da conta</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:54 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 7s+254ms</span>
-						<span class='test-status right pass'>pass</span>
+						<h5 class='node-name'>E adicionar ao carrinho</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:40 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+8ms</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -451,354 +496,22 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:54 PM</td>
-													<td class='step-details'>passed</td>
+												<tr class='log' status='skip'>
+													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+													<td class='timestamp'>2:45:40 PM</td>
+													<td class='step-details'>skipped</td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='13'>
+				<li class='node level-2 leaf skip' status='skip' test-id='13'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao aparece mensagem de usuario ja cadastrado</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:23:54 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+102ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:23:54 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_realiza_um_cadastro_ja_existente.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_realiza_um_cadastro_ja_existente.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_realiza_um_cadastro_ja_existente.png'></li>
-										</ul>
-								</div>
-						</div>
-				</li>
-						</ul>
-				</li>
-	</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='14'>
-					<div class='test-heading'>
-						<span class='test-name'>Automatização de seleção de um produto da pagina princiapl</span>
-						<span class='test-time'>Feb 4, 2020 12:24:04 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Feb 4, 2020 12:24:04 PM</span>
-	<span class='label end-time'>Feb 4, 2020 12:24:39 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+872ms</span>
-</div>
-	<ul class='collapsible node-list' data-collapsible='accordion'>
-		
-				<li class='node level-1  pass' status='pass' test-id='15'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cliente seleciona um produto e aparece o mesmo</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:22 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 17s+591ms</span>
-						<span class='test-status right pass'>pass</span>
-								<span class='category label white-text'>@CenarioSucesso</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='16'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Dado usuário em questão está Pagina inicial</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:15 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+784ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:15 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='17'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Quando clicar em um produto do fornecedor X</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:21 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+392ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:21 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='18'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao validar se o produto X é igual ao selecionado</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:22 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+869ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:22 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_seleciona_um_produto_e_aparece_o_mesmo.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_seleciona_um_produto_e_aparece_o_mesmo.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_seleciona_um_produto_e_aparece_o_mesmo.png'></li>
-										</ul>
-								</div>
-						</div>
-				</li>
-						</ul>
-				</li>
-				<li class='node level-1  pass' status='pass' test-id='19'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cliente seleciona um produto e aparece outro</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:39 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 16s+654ms</span>
-						<span class='test-status right pass'>pass</span>
-								<span class='category label white-text'>@CenarioFalha</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='20'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Dado usuário em questão está Pagina inicial</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:33 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+841ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:33 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='21'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Quando clicar em um produto do fornecedor Y</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:38 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 5s+174ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:38 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='22'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao validar se o produto Y é igual ao selecionado</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:39 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+25ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:39 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_seleciona_um_produto_e_aparece_outro.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_seleciona_um_produto_e_aparece_outro.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_seleciona_um_produto_e_aparece_outro.png'></li>
-										</ul>
-								</div>
-						</div>
-				</li>
-						</ul>
-				</li>
-	</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='23'>
-					<div class='test-heading'>
-						<span class='test-name'>Automatização de seleção de um produto pela pesquisa</span>
-						<span class='test-time'>Feb 4, 2020 12:24:40 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Feb 4, 2020 12:24:40 PM</span>
-	<span class='label end-time'>Feb 4, 2020 12:25:06 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+155ms</span>
-</div>
-	<ul class='collapsible node-list' data-collapsible='accordion'>
-		
-				<li class='node level-1  pass' status='pass' test-id='24'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cliente pesquisa um produto e o mesmo aparece</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:53 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 13s+133ms</span>
-						<span class='test-status right pass'>pass</span>
-								<span class='category label white-text'>@CenarioSucesso</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='25'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Dado usuário em questão está Pagina inicial</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:50 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+861ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:50 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='26'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Quando realizar a pesquisa do produto existente</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:53 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+663ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:53 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='27'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao validar se o produto aparece</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:24:53 PM</span>
+						<h5 class='node-name'>Entao clica no carrinho</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 02:45:40 PM</span>
 						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -811,113 +524,15 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:24:53 PM</td>
-													<td class='step-details'>passed</td>
+												<tr class='log' status='skip'>
+													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+													<td class='timestamp'>2:45:40 PM</td>
+													<td class='step-details'>skipped</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_pesquisa_um_produto_e_o_mesmo_aparece.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_pesquisa_um_produto_e_o_mesmo_aparece.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_pesquisa_um_produto_e_o_mesmo_aparece.png'></li>
-										</ul>
-								</div>
-						</div>
-				</li>
-						</ul>
-				</li>
-				<li class='node level-1  pass' status='pass' test-id='28'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cliente pesquisa um produto e o mesmo não aparece</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:25:06 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 12s+526ms</span>
-						<span class='test-status right pass'>pass</span>
-								<span class='category label white-text'>@CenarioFalha</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='29'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Dado usuário em questão está Pagina inicial</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:25:04 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+890ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:25:04 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='30'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Quando realizar a pesquisa do produto nao existente</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:25:06 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+390ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:25:06 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='31'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao validar se o produto nao aparece</h5>
-						<span class="node-time label grey lighten-1 white-text">Feb 4, 2020 12:25:06 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+1ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>12:25:06 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_pesquisa_um_produto_e_o_mesmo_não_aparece.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_pesquisa_um_produto_e_o_mesmo_não_aparece.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_pesquisa_um_produto_e_o_mesmo_não_aparece.png'></li>
+												<li><img data-featherlight='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_entra_no_site,_realiza_cadastro_e_compra_dois_produtos.png' width='10%' src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_entra_no_site,_realiza_cadastro_e_compra_dois_produtos.png' data-src='C:\Users\kaique.silva\eclipse-workspace\projetobdd\target\cucumber-reports\screenshots\Cliente_entra_no_site,_realiza_cadastro_e_compra_dois_produtos.png'></li>
 										</ul>
 								</div>
 						</div>
@@ -979,15 +594,15 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@CenarioSucesso</span>
+						<span class='category-name'>@Automatizacao</span>
 						<span class='category-status right'>
-							<span class='label pass'>3</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 3</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -1002,63 +617,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 4, 2020 12:22:59 PM</td>
-										<td class='linked' test-id='2'>Automatização de Pagina de Cadastro.Scenario: Cliente realiza um cadastro no site</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 4, 2020 12:24:04 PM</td>
-										<td class='linked' test-id='15'>Automatização de seleção de um produto da pagina princiapl.Scenario: Cliente seleciona um produto e aparece o mesmo</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 4, 2020 12:24:40 PM</td>
-										<td class='linked' test-id='24'>Automatização de seleção de um produto pela pesquisa.Scenario: Cliente pesquisa um produto e o mesmo aparece</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@CenarioFalha</span>
-						<span class='category-status right'>
-							<span class='label pass'>3</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 3</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Feb 4, 2020 12:23:33 PM</td>
-										<td class='linked' test-id='8'>Automatização de Pagina de Cadastro.Scenario: Cliente realiza um cadastro ja existente</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 4, 2020 12:24:23 PM</td>
-										<td class='linked' test-id='19'>Automatização de seleção de um produto da pagina princiapl.Scenario: Cliente seleciona um produto e aparece outro</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 4, 2020 12:24:54 PM</td>
-										<td class='linked' test-id='28'>Automatização de seleção de um produto pela pesquisa.Scenario: Cliente pesquisa um produto e o mesmo não aparece</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 4, 2020 02:45:00 PM</td>
+										<td class='linked' test-id='2'>Automatização Site AdvantageOnlineShopping.Scenario: Cliente entra no site, realiza cadastro e compra dois produtos</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -1077,6 +638,96 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Feb 4, 2020 02:45:30 PM</td>
+                                                        <td class='linked' test-id='11'>Automatização Site AdvantageOnlineShopping.Scenario: Cliente entra no site, realiza cadastro e compra dois produtos.E clicar no produto</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#\33 0"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'RSI1525', ip: '10.1.11.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\KAIQUE~1.SIL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64099}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0cabd05cc4e588aa1dcb247c7b62bf63
+*** Element info: {Using=id, value=30}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at br.com.rsinet.hub.projetobdd.pof.SearchPage.clica_no_produto_4_da_lista_mices(SearchPage.java:65)
+	at br.com.rsinet.hub.projetobdd.stepsdefinitions.SearchPageSteps.clicar_em_produto_y(SearchPageSteps.java:34)
+	at ✽.E clicar no produto(Automatizacao.feature:19)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -1086,31 +737,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>22</div>
+					<div class='panel-lead'>11</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>22</div>
+					<div class='panel-lead'>11</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 4, 2020 12:22:59 PM</div>
+					<div class='panel-lead'>Feb 4, 2020 02:44:59 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 4, 2020 12:25:07 PM</div>
+			 		<div class='panel-lead'>Feb 4, 2020 02:45:42 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>128,021ms</div>
+					<div class='panel-lead'>42,456ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1162,21 +813,12 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@CenarioSucesso</td>
-							<td>3</td>
+							<td>@Automatizacao</td>
 							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@CenarioFalha</td>
-							<td>3</td>
-							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -1192,22 +834,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 22,
-				failParent: 0,
+				passParent: 8,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
+				skipParent: 2,
+				exceptionsParent: 3,
 				
-				passChild: 22,
-				failChild: 0,
+				passChild: 8,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 2,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 3,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

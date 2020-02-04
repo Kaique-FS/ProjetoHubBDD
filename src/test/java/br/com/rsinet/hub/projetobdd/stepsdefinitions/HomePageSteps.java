@@ -3,11 +3,7 @@ package br.com.rsinet.hub.projetobdd.stepsdefinitions;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub.projetobdd.cucumber.TestContext;
-import br.com.rsinet.hub.projetobdd.dataProvider.ConfigFileReader;
-import br.com.rsinet.hub.projetobdd.managers.PageObjectManager;
-import br.com.rsinet.hub.projetobdd.managers.WebDriverManager;
 import br.com.rsinet.hub.projetobdd.pof.HomePage;
-import br.com.rsinet.hub.projetobdd.pof.RegisterPage;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Quando;
 
@@ -15,10 +11,6 @@ public class HomePageSteps {
 
 	WebDriver driver;
 	HomePage HP;
-	RegisterPage RP;
-	PageObjectManager POM;
-	ConfigFileReader CFR;
-	WebDriverManager WDM;
 	TestContext TC;
 
 	public HomePageSteps(TestContext context) {
@@ -43,6 +35,17 @@ public class HomePageSteps {
 	@Quando("^clicar em novo usuario$")
 	public void clicar_em_novo_usuario() {
 		HP.clica_em_novo_usuario();
+	}
+	
+	@Quando("^voltar a pagina inicial$")
+	public void volta_home_page() {
+		HP.navegar_para_pagina_principal();
+	}
+	
+	@Quando("^buscar um produto$")
+	public void busca_produto() {
+		HP.clica_em_pesquisar();
+		HP.digita_o_texto_de_pesquisa_valido();
 	}
 	
 	@Quando("^clicar em um produto do fornecedor Y$")
