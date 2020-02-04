@@ -10,10 +10,10 @@ Contexto:
 	E clicar em novo usuario
 	E inserir detalhes da conta
 
-@CenarioCadastroConcluido
+@CenarioSucesso
 Cenario: Cliente realiza um cadastro no site
 	Entao entrar na conta cadastrada
 
-@CenarioCadastroJaExistentConcluido
+@CenarioFalha
 Cenario: Cliente realiza um cadastro ja existente
 	Entao aparece mensagem de usuario ja cadastrado

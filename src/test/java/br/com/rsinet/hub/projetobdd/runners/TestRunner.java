@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 		"br.com.rsinet.hub.projetobdd.stepsdefinitions" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, 
 				monochrome = true, 
-				tags= {"@CenarioProdutoNaoCorrespondente"})
+				tags= {"@CenarioSucesso, @CenarioFalha"})
 
 public class TestRunner {
 	@AfterClass
@@ -28,7 +28,7 @@ public class TestRunner {
 	    Reporter.setSystemInfo("Selenium", "3.7.0");
 	    Reporter.setSystemInfo("Maven", "3.5.2");
 	    Reporter.setSystemInfo("Java Version", "1.8.0_231");
+	    System.out.println("Sim, Funcionou");
 	}
 }
 
-//, tags= {"@CenarioProdutoNaoCorrespondente"}
