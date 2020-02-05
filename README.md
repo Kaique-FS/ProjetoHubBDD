@@ -1,5 +1,5 @@
 # ProjetoHubBDD
-Projeto de automatização em BDD
+Projeto de automação em BDD
 
 Src/main/java
 
